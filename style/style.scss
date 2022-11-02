@@ -1,0 +1,399 @@
+$blue: #42a9ed;
+$white: #fff;
+
+body {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.none {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 425px;
+  align-items: center;
+  width: 1920px;
+  height: 100px;
+  background: rgba(16, 16, 29, 0.9);
+  &__logo {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $white;
+    &--blue {
+      color: $blue;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    & a {
+      color: #fff;
+    }
+  }
+}
+
+.main {
+  background-image: url(./img/main/main-screen.jpg);
+  background-size: cover;
+  width: 1920px;
+  height: 850px;
+  &__title {
+    padding-left: 10%;
+    padding-top: 8%;
+    font-weight: 700;
+    font-size: 300%;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: $blue;
+    width: 780px;
+    height: 125px;
+    margin: 0;
+    margin-bottom: 80px;
+    &--black {
+      color: #000;
+    }
+  }
+  &__text {
+    padding-left: 10%;
+    &--bold {
+      font-weight: bold;
+    }
+  }
+}
+
+.btn__container {
+  display: flex;
+  gap: 30px;
+  margin-left: 9.9%;
+  margin-top: 4%;
+}
+
+.mainBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  background: $blue;
+  background: #ffffff;
+  border: 1px solid #6f6d7b;
+  color: #2a2b30;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer;
+  width: 183px;
+  height: 43px;
+  &:hover {
+    box-shadow: 1px 1px 5px #286690;
+  }
+  &--active {
+    background: $blue;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+}
+
+.order {
+  background-image: url(./img/main/background.png);
+  background-color: rgb(39, 39, 51);
+  color: #ffffff;
+  width: 1920px;
+  &__title {
+    margin: 0;
+    padding-top: 121px;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    &--blue {
+      color: $blue;
+    }
+  }
+  &__text {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #bbbbbb;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 30px;
+  margin-top: 80px;
+  &__order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    padding: 0px;
+    &--img {
+      background: $blue;
+      border: 5px solid #286690;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        border: 5px solid $white;
+        box-shadow: 1px 1px 5px $white;
+      }
+    }
+  }
+}
+
+.form {
+  margin-top: 80px;
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+    "select email name"
+    "range range file"
+    ". btn .";
+  justify-content: center;
+  &__selected {
+    grid-area: select;
+    padding: 10px;
+    border-radius: 3px;
+    width: 370px;
+    height: 69px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ffffff;
+  }
+  &__email {
+    grid-area: email;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    width: 370px;
+    height: 48px;
+  }
+  &__name {
+    grid-area: name;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    width: 370px;
+    height: 48px;
+  }
+  &__range {
+    grid-area: range;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__file {
+    grid-area: file;
+    position: relative;
+    bottom: 55%;
+    width: 389px;
+    height: 48px;
+    background: $white;
+    border: 2px solid $blue;
+    border-radius: 3px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 1px 5px $blue;
+    }
+    &--add {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #272733;
+    }
+  }
+  &__btn {
+    grid-area: btn;
+    padding: 15px 10px;
+    margin-bottom: 151px;
+    width: 370px;
+    height: 48px;
+    background: $blue;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 1px 5px $white;
+    }
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+  width: 100%; /* Указание параметра ширины требуется для Firefox. */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.7);
+  height: 5px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -10px;
+  background: $blue;
+  border: 3px solid $blue;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 1px 5px $white;
+  }
+}
+
+input[type="range"]::-moz-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.7);
+  height: 5px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+input[type="range"]::-moz-slider-thumb {
+  margin-top: -10px;
+  background: $blue;
+  border: 3px solid $blue;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 1px 5px $white;
+  }
+}
+
+input[type="range"]::-ms-thumb-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.7);
+  height: 5px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+input[type="range"]::-ms-thumb {
+  margin-top: -10px;
+  background: $blue;
+  border: 3px solid $blue;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 1px 5px $white;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: #3d4050;
+  color: #fff;
+  align-items: center;
+  gap: 40px;
+  width: 1920px;
+  height: 80px;
+  background: #3d4050;
+  &__copy {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  &__system {
+    display: flex;
+    gap: 40px;
+    border-right: 1px solid #c3c3c3;
+    border-left: 1px solid #c3c3c3;
+    padding: 0 40px;
+  }
+  &__social {
+    display: flex;
+    gap: 40px;
+    & a {
+      color: $white;
+    }
+  }
+}
+
+input[type="file"] {
+  outline: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.percent {
+  float: right;
+}

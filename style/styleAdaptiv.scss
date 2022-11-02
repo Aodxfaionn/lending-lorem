@@ -1,0 +1,52 @@
+$blue: #42a9ed;
+$white: #fff;
+
+@media only screen and (max-width: 376px) {
+  .header {
+    width: 375px;
+    justify-content: flex-start;
+    &__logo {
+      margin-left: 10px;
+    }
+    &__nav {
+      display: none;
+      &--open {
+        position: absolute;
+        left: 0;
+        top: 75px;
+        z-index: 1;
+        display: block;
+        width: 375px;
+        text-align: center;
+        margin: 0;
+      }
+      &--item {
+        padding: 10px;
+        border-bottom: 1px #d5cbcb solid;
+        background-color: $white;
+        & a {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    left: 300px;
+    position: absolute;
+    z-index: 2;
+    &--burger {
+      width: 24px;
+      height: 3px;
+      background-color: #ffffff;
+      display: block;
+      margin: 6px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
